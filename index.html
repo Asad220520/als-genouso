@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Deutsch Pro: Komparation</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="app-header">
+        <div class="logo">
+            <i class="fa-solid fa-layer-group"></i> Deutsch<span>Pro</span>
+        </div>
+        <div class="user-progress">
+            <i class="fa-solid fa-fire"></i> 1 день
+        </div>
+    </header>
+
+    <main id="app-content">
+        </main>
+
+    <nav class="bottom-nav">
+        <button class="nav-item active" onclick="switchTab('learn')">
+            <i class="fa-solid fa-book-open"></i>
+            <span>Учить</span>
+        </button>
+        <button class="nav-item" onclick="switchTab('practice')">
+            <i class="fa-solid fa-dumbbell"></i>
+            <span>Практика</span>
+        </button>
+    </nav>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
