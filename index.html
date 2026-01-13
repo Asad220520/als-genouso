@@ -3,36 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Deutsch Pro: Komparation</title>
+    <title>Deutsch Master</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="app-header">
+    <div class="background-decor"></div>
+
+    <header>
         <div class="logo">
-            <i class="fa-solid fa-layer-group"></i> Deutsch<span>Pro</span>
+            <i class="fa-solid fa-bolt"></i> Deutsch<span class="highlight">App</span>
         </div>
-        <div class="user-progress">
-            <i class="fa-solid fa-fire"></i> 1 день
+        <div class="streak-badge">
+            <i class="fa-solid fa-fire"></i> 12
         </div>
     </header>
 
-    <main id="app-content">
+    <main id="app-container">
         </main>
 
     <nav class="bottom-nav">
         <button class="nav-item active" onclick="switchTab('learn')">
-            <i class="fa-solid fa-book-open"></i>
-            <span>Учить</span>
+            <div class="icon-box"><i class="fa-solid fa-layer-group"></i></div>
+            <span>Теория</span>
         </button>
         <button class="nav-item" onclick="switchTab('practice')">
-            <i class="fa-solid fa-dumbbell"></i>
-            <span>Практика</span>
+            <div class="icon-box"><i class="fa-solid fa-gamepad"></i></div>
+            <span>Тест</span>
+        </button>
+        <button class="nav-item" onclick="switchTab('construct')">
+            <div class="icon-box"><i class="fa-solid fa-puzzle-piece"></i></div>
+            <span>Сборка</span>
         </button>
     </nav>
 

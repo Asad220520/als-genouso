@@ -1,114 +1,147 @@
-// База данных приложения
-
 const appData = {
-  // Раздел 1: Истории (Теория)
+  // === ТЕОРИЯ ===
   stories: [
     {
-      title: "Работа и Зарплата",
-      icon: "fa-briefcase",
-      steps: [
+      title: "Сравнение (Komparativ)",
+      subtitle: "Быстрее, выше, сильнее",
+      icon: "fa-person-running",
+      phrases: [
         {
-          icon: "😐",
-          ru: "Я зарабатываю много.",
-          de: "Ich verdiene <b>viel</b>.",
-        },
-        {
-          icon: "🤝",
-          ru: "Мой друг зарабатывает столько же, сколько я.",
-          de: "Er verdient <span class='highlight-eq'>genauso viel wie</span> ich.",
-        },
-        {
-          icon: "📈",
-          ru: "Но шеф зарабатывает больше, чем мы.",
-          de: "Der Chef verdient <span class='highlight-comp'>mehr als</span> wir.",
-        },
-        {
-          icon: "👑",
-          ru: "Владелец зарабатывает больше всех.",
-          de: "Der Besitzer verdient <span class='highlight-super'>am meisten</span>.",
-        },
-      ],
-    },
-    {
-      title: "Скорость Транспорта",
-      icon: "fa-gauge-high",
-      steps: [
-        {
-          icon: "🚌",
-          ru: "Автобус быстрый.",
-          de: "Der Bus ist <b>schnell</b>.",
-        },
-        {
-          icon: "🚆",
           ru: "Поезд быстрее, чем автобус.",
-          de: "Der Zug ist <span class='highlight-comp'>schneller als</span> der Bus.",
+          de: "Der Zug ist <span class='mark m-comp'>schneller als</span> der Bus.",
         },
         {
-          icon: "🚗",
-          ru: "Машина такая же быстрая, как поезд.",
-          de: "Das Auto ist <span class='highlight-eq'>genauso schnell wie</span> der Zug.",
+          ru: "Берлин больше, чем Бонн.",
+          de: "Berlin ist <span class='mark m-comp'>größer als</span> Bonn.",
         },
         {
-          icon: "✈️",
-          ru: "Самолет быстрее всех.",
-          de: "Das Flugzeug ist <span class='highlight-super'>am schnellsten</span>.",
+          ru: "Зимой холоднее, чем осенью.",
+          de: "Im Winter ist es <span class='mark m-comp'>kälter als</span> im Herbst.",
+        },
+        {
+          ru: "Мой чемодан тяжелее.",
+          de: "Mein Koffer ist <span class='mark m-comp'>schwerer</span>.",
         },
       ],
     },
     {
-      title: "Вкусы и Еда",
-      icon: "fa-burger",
-      steps: [
+      title: "Равенство (Genauso)",
+      subtitle: "Одинаковые вещи",
+      icon: "fa-scale-balanced",
+      phrases: [
         {
-          icon: "🍕",
-          ru: "Я люблю (ем охотно) пиццу.",
-          de: "Ich esse <b>gern</b> Pizza.",
+          ru: "Я такой же быстрый, как ты.",
+          de: "Ich bin <span class='mark m-eq'>genauso schnell wie</span> du.",
         },
         {
-          icon: "🥙",
-          ru: "Но донер я люблю больше.",
-          de: "Aber Döner esse ich <span class='highlight-comp'>lieber als</span> Pizza.",
+          ru: "Машина такая же дорогая.",
+          de: "Das Auto ist <span class='mark m-eq'>genauso teuer</span>.",
         },
         {
-          icon: "🥩",
-          ru: "Больше всего я люблю стейк.",
-          de: "Steak esse ich <span class='highlight-super'>am liebsten</span>.",
+          ru: "Сегодня так же тепло, как вчера.",
+          de: "Heute ist es <span class='mark m-eq'>genauso warm wie</span> gestern.",
+        },
+      ],
+    },
+    {
+      title: "Чемпионы (Superlativ)",
+      subtitle: "Самый-самый",
+      icon: "fa-trophy",
+      phrases: [
+        {
+          ru: "Самолет быстрее всех.",
+          de: "Das Flugzeug ist <span class='mark m-super'>am schnellsten</span>.",
+        },
+        {
+          ru: "В Сибири холоднее всего.",
+          de: "In Sibirien ist es <span class='mark m-super'>am kältesten</span>.",
+        },
+        {
+          ru: "Этот костюм самый красивый.",
+          de: "Dieser Anzug ist <span class='mark m-super'>am schönsten</span>.",
+        },
+      ],
+    },
+    {
+      title: "Исключения (Важно!)",
+      subtitle: "Gut, Viel, Gern",
+      icon: "fa-star",
+      phrases: [
+        {
+          ru: "Я люблю (охотнее) чай.",
+          de: "Ich trinke <span class='mark m-comp'>lieber</span> Tee.",
+        },
+        {
+          ru: "Больше всего я люблю воду.",
+          de: "Am <span class='mark m-super'>liebsten</span> trinke ich Wasser.",
+        },
+        {
+          ru: "Ты играешь лучше.",
+          de: "Du spielst <span class='mark m-comp'>besser</span>.",
+        },
+        {
+          ru: "Месси играет лучше всех.",
+          de: "Messi spielt <span class='mark m-super'>am besten</span>.",
         },
       ],
     },
   ],
 
-  // Раздел 2: Упражнения
+  // === ТЕСТ (QUIZ) ===
   quiz: [
     {
-      question: "Der Bus ist schnell, aber der Zug ist ...",
-      options: ["schnell", "schneller", "am schnellsten"],
-      answer: "schneller",
-      translation: "Поезд быстрее",
+      q: "Ferrari ist schnell, aber Bugatti ist ...",
+      opts: ["schnell", "schneller", "am schnellsten"],
+      a: "schneller",
     },
     {
-      question: "Mein Freund verdient genauso viel ... ich.",
-      options: ["als", "wie", "dann"],
-      answer: "wie",
-      translation: "Столько же ... как (равенство)",
+      q: "Ich esse Pizza gern, aber Sushi esse ich ...",
+      opts: ["gerner", "lieber", "besser"],
+      a: "lieber",
     },
     {
-      question: "Ich mag Pizza, aber Döner mag ich ...",
-      options: ["gut", "besser", "lieber"],
-      answer: "lieber",
-      translation: "Люблю больше (охотнее)",
+      q: "Wer hat das meiste Geld? (Топ)",
+      opts: ["am meisten", "am mehrsten", "am vielsten"],
+      a: "am meisten",
     },
     {
-      question: "Wer ist der Champion? Er ist ...",
-      options: ["gut", "besser", "am besten"],
-      answer: "am besten",
-      translation: "Лучше всех",
+      q: "Mein Bruder ist genauso alt ... ich.",
+      opts: ["als", "wie", "von"],
+      a: "wie",
     },
     {
-      question: "Das Auto ist schneller ... das Fahrrad.",
-      options: ["als", "wie", "von"],
-      answer: "als",
-      translation: "Быстрее ЧЕМ (сравнение)",
+      q: "Der Winter ist ... als der Sommer.",
+      opts: ["kalt", "kälter", "am kältesten"],
+      a: "kälter",
+    },
+    {
+      q: "Du bist gut, aber ich bin ...",
+      opts: ["guter", "besser", "besten"],
+      a: "besser",
+    },
+  ],
+
+  // === КОНСТРУКТОР (BUILDER) ===
+  build: [
+    {
+      ru: "Поезд быстрее, чем машина.",
+      parts: ["Der Zug", "ist", "schneller", "als", "das Auto."],
+    },
+    {
+      ru: "Я зарабатываю больше, чем ты.",
+      parts: ["Ich", "verdiene", "mehr", "als", "du."],
+    },
+    {
+      ru: "Анна такая же красивая, как Мария.",
+      parts: ["Anna", "ist", "genauso", "schön", "wie", "Maria."],
+    },
+    {
+      ru: "Больше всего я люблю спать.",
+      parts: ["Am", "liebsten", "schlafe", "ich."],
+    },
+    {
+      ru: "Мой дом больше, чем твой.",
+      parts: ["Mein Haus", "ist", "größer", "als", "dein Haus."],
     },
   ],
 };
